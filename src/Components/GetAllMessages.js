@@ -12,7 +12,7 @@ const GetAllMessages = () => {
     },[])
 
     function loadData()  {
-        return messageData.localeCompare((m) =>
+        return messageData.map((m) =>
         <div key={m.id} id={'id' + m.id}>
             <h5 key = {m.id}>Message ID: {m.id}</h5>
             <p key = {m.content}>Message: {m.content}</p>
