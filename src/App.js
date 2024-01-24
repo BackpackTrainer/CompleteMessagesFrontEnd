@@ -7,6 +7,7 @@ import PostPerson from './Components/PostPerson';
 
 /* Notes:
   Built to be used with "BarclaysMessageApp" Backend
+    Banch: BillsPlayingBranch
 
 
   When submitting a message if you enter a name that does not exist, the backend will create a person with that name and no email
