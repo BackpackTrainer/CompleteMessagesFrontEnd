@@ -11,7 +11,7 @@ import PostPerson from './Components/PostPerson';
 
 
   When submitting a message if you enter a name that does not exist, the backend will create a person with that name and no email
-  There is no feedback given to the user when posting a message or person and the page must be refreshed to display this new information
+  There is no feedback given to the user when posting a message or person the Fetch buttons can be used to fetch any new entries
 */
 
 function App() {
