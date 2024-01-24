@@ -10,7 +10,7 @@ const GetMessageByIDComponent = (props) => {
                 console.log(json);
                 setMessageData(()=> json);
             })
-},[])
+},[props.messageID])
 
     if(messageData) {
     return (

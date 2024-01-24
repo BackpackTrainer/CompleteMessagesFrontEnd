@@ -11,13 +11,16 @@ const GetAllMessages = () => {
             })
     },[])
 
-    function loadData()  {
+
+
+    function loadData() {
         return messageData.map((m) =>
-        <div key={m.id} id={'id' + m.id}>
-            <h5 key = {m.id}>Message ID: {m.id}</h5>
-            <p key = {m.content}>Message: {m.content}</p>
-            <h4 key = {m.sender.name}>Sent By: {m.sender.name}</h4>
-        </div>
+            <div key={m.id} id={'id' + m.id}>
+                <h5 key = {m.id}>Message ID: {m.id}</h5>
+                <p key = {m.content}>Message: {m.content}</p>
+                <h4 key = {m.sender.name}>Sent By: {m.sender.name}</h4>
+                <br />
+            </div>
         )
     }
     if(messageData) {
@@ -26,7 +29,7 @@ const GetAllMessages = () => {
         )
     } else {
         return (
-            <div>Loading ....</div>
+            <div>Loading ...</div>
         )
     }
 }

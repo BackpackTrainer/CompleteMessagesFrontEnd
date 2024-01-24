@@ -10,10 +10,12 @@ const MessageByID = () => {
         fetch("http://localhost:8080/messages")
             .then((resp)=>resp.json())
             .then((json) => {
-                let temp = json.map((m)=> 
-                    <option key = {m.id} value={m.id}>{m.id}</option>
-                )
-                setAllIds(()=>temp);
+                if (json[0].id){   
+                    let temp = json.map((m)=> 
+                        <option key = {m.id} value={m.id}>{m.id}</option>
+                    )
+                    setAllIds(()=>temp);
+                }
             })
         },[] )
 
@@ -26,7 +28,6 @@ const MessageByID = () => {
     <select onChange={(e)=>setMessageId(()=>e.target.value)}>
         <option key="default" value="">Choose and ID</option>
         {allIds}
-
     </select>
 
    { messageId ? <GetMessageByIDComponent key = {messageId} messageID = {messageId} /> : <></>  }
